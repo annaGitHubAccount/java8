@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.OptionalDouble;
 
@@ -28,11 +29,7 @@ public class PersonUtilsTest {
     @Test
     public void shouldPersonListNachNachnameSortieren(){
 
-       List<String> expectedNachnamenList = new ArrayList<>();
-       expectedNachnamenList.add("Jackson");
-       expectedNachnamenList.add("Mercury");
-       expectedNachnamenList.add("Polanska");
-
+        List<String> expectedNachnamenList = Arrays.asList("Brown", "Jackson", "Mercury", "Monrou", "Polanska");
         List<String> nachnamenList = PersonUtils.personListPerNachnameSortieren(personList);
 
         Assert.assertEquals(expectedNachnamenList, nachnamenList);
