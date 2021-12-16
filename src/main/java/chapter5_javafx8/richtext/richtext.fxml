@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+
+<Scene width="600" height="250" fill="white" xmlns:fx="http://javafx.com/fxml">
+    <stylesheets>
+        <URL value="@richtext.css"/>
+    </stylesheets>
+    <Pane fx:id="pane">
+        <VBox>
+            <TextFlow styleClass="paragraph">
+                <Text styleClass="text1">Hello</Text>
+                <Text text=" "/>
+                <Text styleClass="text2, big">Bold</Text>
+                <Text text=" "/>
+                <Text styleClass="text3, dropshadow">Effect</Text>
+            </TextFlow>
+
+            <TextFlow styleClass="paragraph">
+                <Text styleClass="underlinefancy">
+                    fancy underline
+                    <effect>
+                        <DropShadow color="BLACK" offsetX="3.0" offsetY="3.0"/>
+                    </effect>
+                </Text>
+            </TextFlow>
+
+            <TextFlow styleClass="paragraph">
+                <Text styleClass="rotatedThai ">Thai: เครื่องบินแล้วเก่า</Text>
+            </TextFlow>
+
+        </VBox>
+    </Pane>
+</Scene>

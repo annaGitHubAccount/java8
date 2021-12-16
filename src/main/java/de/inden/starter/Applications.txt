@@ -1,0 +1,197 @@
+// Übersicht über die Beispielprogramme des Buchs "Java 8 – Die Neuerungen"				
+				
+// In der nachfolgenden Tabelle sind die ausführbaren Programme aufgelistet. Zum Teil ist im Buch kein Programmname angegeben. 
+// Daher findet Sie hinten einen Verweis auf die Seitennummer.				
+// 										
+// Kapitel	Seite	Programmname	Package	Kommentar
+				
+2	3	SortAndPrinPreJDK8Example	chapter2_lambdas	                      Beispielprogramm zur Demonstration, dass die Sortierung nach Länge und kommaseparierte Aufbereitung vor JDK 8 recht viele Anweisungen benötigt.
+2.1.5	10-11	LambdaVsInnerClassExample	chapter2_lambdas.lambdas	      Beispielprogramm zur Demonstration der Unterschiede zwischen Lambdas und inneren Klassen beim Zugriff auf Variablen usw.
+2.2.1	14	DefaultMethodAndLambdaExample	chapter2_lambdas.defaultmethods	  Beispielprogramm, das die neuen Defaultmethoden sort() und forEach() für Collections und deren Zusammenspiel mit Lambdas zeigt.
+2.3	20	FirstMethodReferenceExample	chapter2_lambdas.methodreferences	      Beispielprogramm, das die bessere Lesbarkeit durch Methodenreferenzen statt Lambdas zeigt.
+2.3	21	MethodReferenceExample	chapter2_lambdas.methodreferences	          Beispielprogramm, das die bessere Lesbarkeit durch Methodenreferenzen statt Lambdas zeigt und verdeutlicht, dass Lambdas nicht direkt in eine Methodenreferenz gewandelt werden können, falls neben dem Metodenaufruf noch eine weitere Aktion erfolgt, hier die Addition eines ",".
+2.3	21	MethodReferenceExample2	chapter2_lambdas.methodreferences	          Beispielprogramm, das die bessere Lesbarkeit durch Methodenreferenzen statt Lambdas zeigt und verdeutlicht, dass Lambdas immer durch eine Methodenreferenz auf eine eigen Methode ersetzt werden können.
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------				
+
+3.1.1	32	ExternalIterationExample	chapter3_streams.external_internal_iteration	Beispielprogramm zur Demonstration der externen Iteration auf 3 verschiedene Arten.
+3.1.2	32	InternalIterationExample	chapter3_streams.external_internal_iteration	Beispielprogramm zur Demonstration der internen Iteration auf 3 verschiedene Arten.
+3.2.1	36	FirstPredicatesExample	chapter3_streams.collections	                    Beispielprogramm zur Demonstration der Formulierung einfacher Bedingungen mit Prädikaten.
+3.2.1	38	ComplexPredicatesExample	chapter3_streams.collections	                Beispielprogramm zur Demonstration von komplexeren Bedingungen mit Prädikaten.
+3.2.2	39	RemoveIfExample	chapter3_streams.collections	                            Beispielprogramm zur Demonstration der Methode Collection.removeIf().
+3.2.3	41	UnaryOperatorExample	chapter3_streams.collections	                    Beispielprogramm zur Demonstration des Interfaces UnaryOperator<T>.
+3.2.4	42	ReplaceAllExample	chapter3_streams.collections	                        Beispielprogramm zur Demonstration der neuen Methode List.replaceAll().
+3.3	    45	PrimitivesStreamExample	chapter3_streams.create	                            Beispielprogramm demonstiert die Verarbeitung von Werten primitiven Typs mit Streams.
+3.3.1	46	InfiniteStreamsExample	chapter3_streams.create	                            Beispielprogram zeigt die Berechnung von unendlichen Streams auf zwei verschiedene Arten.
+3.3.3	49	FilterExample	chapter3_streams.intermediate	                            Beispielprogram illustriert das Filtern in einem Stream.
+3.3.3	51	AttributeExtractionExample	chapter3_streams.intermediate	                Beispielprogram zeigt die Extraktion von Attributen als eine Intermediate Operation.
+3.3.3	52-53	FlatMapExample	chapter3_streams.intermediate	                        Beispielprogram zeigt die Abbildung von Objekten mithilfe der Methode map() -- hier zur Extraktion von Worten aus Zeilen. 
+3.3.3	53	FlatMapExample2	chapter3_streams.intermediate	                            Beispielprogram mit funktionaler Erweiterung zeigt die Abbildung von Objekten mithilfe der Methode map() -- hier zur Extraktion von Worten aus Zeilen. 
+3.3.3	54-55	StreamPeekExample	chapter3_streams.intermediate	                    Beispielprogamm zeigt die Methode peek() zur Inspektion von Verarbeitungsschritten.
+3.3.4	56	SortedAndDistinctExample	chapter3_streams.intermediate	                Beispielprogramm zeigt die Methoden distinct() und sorted(), um Ausgaben zu sortieren und Duplikation zu entfernen.
+3.3.5	58	StreamToArrayExample	chapter3_streams.terminal	                        Beispielprogamm demonstriert die Umwandlung eines Streams in ein Array.
+3.3.5	59	CalculationExample	chapter3_streams.terminal	                            Beispielprogamm zeigt, wie man verschiedene Berechnungen ausführen kann.
+3.3.5	61	MatchExample	chapter3_streams.terminal	                                Beispielprogramm demonstriert verschiedene Matching-Strategien.
+3.3.5	63	ReduceExample	chapter3_streams.terminal	                                Beispielprogamm zeigt die Methode reduce() zur Berechnung von Ergebnissen.
+3.3.5	64	CollectorsSpecialExample	chapter3_streams.terminal	                    Beispielprogamm demonstriert verschiedene spezielle Gruppierungs- und Kombinationsmetoden.
+3.3.5	65	FlatMapAndGroupingExample	chapter3_streams.terminal	                    Beispielprogram zeigt die Abbildung von Objekten mithilfe der Methode flatMap() -- hier zur Extraktion von Worten aus Zeilen. 
+
+3.3.6	67	StreamsProcessingExample	chapter3_streams.parallel	Beispielprogamm zeigt die Reihenfolge bei der Abarbeitung von Verarbeitungsschritten.
+3.3.6	68	StreamsParallelProcessingExample	chapter3_streams.parallel	 Beispielprogamm zeigt die Reihenfolge bei der parallelen Abarbeitung von Verarbeitungsschritten.
+3.3.6	69	WrongParallelForEachExample	chapter3_streams.parallel	Beispielprogram illustriert, welche Fehler auftreten können, wenn man forEach() in Kombination mit parallelen Streams nutzt.
+3.3.6	70	ParallelFindAnyExample	chapter3_streams.parallel	Beispielprogram illustriert, welche Effekte auftreten koennen, wenn man finAny() in Kombination mit parallelen Streams nutzt.
+
+3.4.1	71	FilterMapReduceOldStyleExample	chapter3_streams.filter_map_reduce	         Beispielprogram zeigt, wie man bis vor JDK 8 eine Filter-Map-Reduce-Funktionalität durch Hintereinanderausführung mehrerer Methoden realisieren konnte.
+3.4.2	74	FilterMapReduceJDK8Example	chapter3_streams.filter_map_reduce	             Beispielprogram zeigt, wie man mit JDK 8 und Streams sowie Lambdas elegant eine Filter-Map-Reduce-Funktionalität implementiert.
+
+3.5.1	77	FirstCollectorsExample	        chapter3_streams.collectors	               Beispielprogramm zeigt ein einführendes Beispiel für Aufrufe von collect().
+3.5.2	77	CollectorsJoiningExample	    chapter3_streams.collectors	               Beispielprogramm zeigt verschiedene Verkettungen mit joining().
+3.5.2	78	CollectorsToCollectionExample	chapter3_streams.collectors	               Beispielprogramm zeigt die Aufbereitung eines Streams als Collection mit toCollection().
+3.5.3	79	CollectorsCalculationsExample	chapter3_streams.collectors	               Beispielprogramm zeigt verschiedene mathemathische Berechnungen auf Streams in collect().
+3.5.4	81	CollectorsToMapExample	        chapter3_streams.collectors	               Beispielprogramm zeigt verschiedene Varianten der Gruppierung der Werte aus Streams.
+3.5.4	82	CollectorsToMapExample2	        chapter3_streams.collectors	               Beispielprogramm zeigt verschiedene Varianten der Gruppierung und Kombination von Werten aus Streams.
+3.5.4	83	CollectorsToMapExample3	        chapter3_streams.collectors	               Beispielprogramm zeigt verschiedene Varianten der Gruppierung und Kombination von Werten aus Streams (Konkatenation).
+3.5.4	84	CollectorsToMapExample4	        chapter3_streams.collectors	               Beispielprogramm zeigt verschiedene Varianten der Gruppierung und Kombination von Werten aus Streams (Multimap).
+
+3.5.5	85	CollectorsGroupingByExample	        chapter3_streams.collectors	               Beispielprogramm zeigt verschiedene Varianten der Gruppierung mit groupingBy().
+3.5.5	86	CollectorsGroupingByExample2	    chapter3_streams.collectors	               Beispielprogramm zeigt verschiedene Varianten der Gruppierung mit groupingBy().
+3.5.5	88	CollectorsPartitioningByExample	    chapter3_streams.collectors	               Beispielprogramm zeigt verschiedene Varianten der Partionierung mit partitioningBy().
+
+3.6.3	93	StatefulLambdas	             chapter3_streams.pitfalls	               Beispielprogram illustriert, welche Probleme durch zustandsbehaftete Lambdas auftreten koennen.
+3.6.3	97	StatefulParallelStream	    chapter3_streams.pitfalls	               Beispielprogram illustriert, welche Probleme durch zustandsbehaftete Lambdas in Streams auftreten koennen.
+ 
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------				
+4.1	    108	  DateCtorProblemsExample	chapter4_dateandtime	            Beispielprogramm zur Demonstration von Problemen bei Konstruktoraufrufen der Klasse Date.
+4.1	    109	  OldApiDurationCalculationExample	chapter4_dateandtime	    Beispielprogramm zur Demonstration von Problemen bei Berechnungen mithilfe der Klasse Date.
+
+4.2.2	113	  MonthAndDayOfWeekExample	chapter4_dateandtime	            Beispielprogramm zur Demonstration der neuen Klassen Month und DayOfWeek.
+4.2.2	113	  YearAndMoreExample	    chapter4_dateandtime	            Beispielprogramm zur Demonstration der neuen Klassen Year und YearMonth usw.
+4.2.4	114	  InstantExample	chapter4_dateandtime	                    Beispielprogramm zur Demonstration der neuen Klasse Instant.
+4.2.5	115	  DurationExample	chapter4_dateandtime	                    Beispielprogramm zur Demonstration der neuen Klasse Duration.
+4.2.5	116	  DurationCalculationExample	chapter4_dateandtime	        Beispielprogramm zur Demonstration von Berechnungen mit der neuen Klasse Duration.
+4.2.5	117	  DurationSpecialExample	chapter4_dateandtime	            Beispielprogramm zur Demonstration einiger Besonderheiten der neuen Klasse Duration.
+
+4.2.6	118	  ChronoUnitExample	chapter4_dateandtime	                    Beispielprogramm zur Demonstration der neuen Klasse ChronoUnit.
+4.2.7	120	  LocalDateAndTimeExample	chapter4_dateandtime	            Beispielprogramm zur Demonstration der neuen Klassen LocalDate, LocalTime und LocalDateTime.
+4.2.8	120	  PeriodExample	chapter4_dateandtime	                        Beispielprogramm zur Demonstration der neuen Klasse Period.
+4.2.8	121	  PeriodCalculationExample	chapter4_dateandtime	            Beispielprogramm zur Demonstration von Berechnungen mit der neuen Klasse Period.
+4.2.9	123	  ZonedDateTimeExample	chapter4_dateandtime	                Beispielprogramm zur Demonstration der neuen Klasse ZonedDateTime.
+4.2.10	124	  ZoneIdExample	chapter4_dateandtime	                        Beispielprogramm zur Demonstration von Zeitzonen-IDs.
+4.2.10	125	  ZoneOffsetExample	chapter4_dateandtime	                    Beispielprogramm zur Demonstration von Zeitzonen-Offsets.
+
+4.2.11	125	  FirstClockExample	chapter4_dateandtime	                    Beispielprogramm zur Demonstration der neuen Klasse Clock.
+4.2.11	126	  ClockExample	chapter4_dateandtime	                        Beispielprogramm zur Demonstration der neuen Klasse Clock.
+4.2.12	127-128	FormattingExample	chapter4_dateandtime	                Beispielprogramm zur Demonstration der neuen Klasse DateTimeFormatter zum Formatieren und Parsen von Datumswerten.
+
+4.3	    130	   PredefinedTemporalAdjustersExample	chapter4_dateandtime.temporaladjusters	     Beispielprogramm zur Demonstration vordefinierter TemporalAdjuster.
+4.3	    132	   MorePredefinedTemporalAdjustersExample	chapter4_dateandtime.temporaladjusters	 Beispielprogramm zur Demonstration weiterer vordefinierter TemporalAdjuster.
+
+4.4.1	133	NewApiDurationCalculationExample	chapter4_dateandtime	    Beispielprogramm zur Demonstration der Berechnung von Zeitdauern mit dem neuen Date And Time API.
+4.4.2	135	SpecialClockExample	chapter4_dateandtime	                    Beispielprogramm zur Demonstration einer eigenen Implementierung der Klasse Clock.
+4.4.3	136	NextPaydayExample	chapter4_dateandtime.temporaladjusters	    Beispielprogramm zur Demonstration eines selbstdefinierten komplexeren TemporalAdjuster.
+4.4.4	140	LegacyExample	chapter4_dateandtime.migration	                Beispielprogramm zur Demonstration der Interaktion mit dem alten Date-/Calendar-API.
+4.4.4	141	DateToLocalDateExample	chapter4_dateandtime.migration	        Beispielprogramm zur Demonstration der Interaktion mit dem alten Date-/Calendar-API.
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------				
+5.1.2	149	   FirstJavaFxExample	chapter5_javafx.basics	                Beispielprogramm zur Einführung der grundlegenden Elemente von JavaFX.
+5.1.2	151	   JavaFxActionHandlingExample	chapter5_javafx.basics	        Beispielprogramm demonstriert das Action Handling in JavaFX.
+5.1.3	153	   LayoutCombinationExample	chapter5_javafx.layout	            Beispielprogramm demonstriert die Kombination verschiedener JavaFX-Layoutkomponenten.
+5.1.3	155	   FirstHBoxExample	chapter5_javafx.layout	                    Beispielprogramm zeigt ein einfaches Layout mit der Containerkomponente HBox.
+5.1.3	157	   HBoxWithAlignmentsExample	chapter5_javafx.layout	        Beispielprogramm zeigt die Möglichkeiten zur Ausrichtung mit einer HBox.
+5.1.3	158	   ResizableHBoxExample	chapter5_javafx.layout	                Beispielprogramm illustriert, wie Bedienelemente auf Größenveränderung reagieren und demonstriert den Einsatz einer eigenen Ellipsis.
+5.1.3	159-160	GridPaneExample	chapter5_javafx.layout	                    Beispielprogramm zeigt, wie man Layouts mithilfe einer GridPane gestalten kann und illustriert den Einsatz von Hilfslinien.
+
+5.2.2	163	   FirstFxmlExample	chapter5_javafx.fxml	                    Beispielprogramm nutzt FXML zur Definition eines einfachen Layouts.
+5.2.3	166	   FXMLExampleWithSpecialController	chapter5_javafx.fxml	    Beispielprogramm nutzt FXML, aber setzt den Controller erst später im Programm.
+
+5.3.1	168-169	FirstCssExample	chapter5_javafx.css	                        Beispielprogramm zeigt die optische Gestaltung von zwei Buttons mithilfe von CSS.
+5.3.1	169	   FXMLExampleWithCSS	chapter5_javafx.fxml	                Beispielprogramm nutzt FXML zur Definition eines einfachen Layouts und nutzt CSS zur optischen Gestaltung.
+5.3.1	171	   ExternalCssExample	chapter5_javafx.css	                    Beispielprogramm zeigt die optische Gestaltung von Buttons mithilfe von CSS, wobei die CSS-Informationen aus einer Datei stammen. Zeigt Styling mit CSS-Selektor und ID.
+5.3.1	172  	DynamicCssExample	chapter5_javafx.css	                    Beispielprogramm zeigt die optische Gestaltung von Buttons mithilfe von CSS, wobei die CSS-Informationen dynamisch wirken, also etwa auf Selektion usw.
+5.3.1	BONUS	ChangeExternalCssExample	chapter5_javafx.css	            Beispielprogramm demonstriert, dass verschiedene Stylings auch dynamsich verändert werden können.
+5.3.2	173-174	JavaFxEffectsExample	chapter5_javafx.animations_and_effects	Beispielprogramm zeigt verschiedene Effekte wie Schatten und Reflexion.
+5.3.2	175-176	AnimationExample	chapter5_javafx.animations_and_effects	Beispielprogramm zeigt eine Animation eines Texts mit Größenveränderung und Rotation.
+
+5.4.1	178	FirstPropertyExample	chapter5_javafx.bindings	            Beispielprogramm zur Einfuehrung in die Grundlagen von Properties.
+5.4.2	180	FirstBindingExample	chapter5_javafx.bindings	                Beispielprogramm zur Einfuehrung in das Binding von Properties. 
+5.4.2	180	TextFieldAndSliderPropertyExample	chapter5_javafx.bindings	Beispielprogramm zur Verknüpfung von Properties und Bedeinelementen.
+
+5.4.3	184	ObservableListExample	chapter5_javafx.observablecollections	    Beispielprogramm zur Demonstration der ObservableList.
+5.4.3	185-186	EditabelListViewExample	chapter5_javafx.observablecollections	Beispielprogramm demonstriert, wie Änderungen in einem ListView ausgeführt werden können.
+5.4.3	188	ListFilterableExample	chapter5_javafx.observablecollections	    Beispielprogramm demonstriert, wie man in einem ListView filtert.
+
+
+5.5.2	190	      DatePickerExample	chapter5_javafx8.new_controls	         Beispielprogramm zeigt die mit JDK 8 eingeführte DatePicker-Komponente.
+5.5.2	193	      TreeTableViewExample	chapter5_javafx8.new_controls	     Beispielprogramm zeigt die mit JDK 8 eingeführte TreeTableView-Komponente.
+5.5.2	194-195	  TreeTableViewExample2	chapter5_javafx8.new_controls	     Beispielprogramm zeigt die mit JDK 8 eingeführte TreeTableView-Komponente mit eigenem Renderer.
+
+5.5.3	196	    ListFilterableExampleImproved	 chapter5_javafx8.filterandsort	   Beispielprogramm demonstriert, wie man in einem ListView filtert. 
+5.5.3	197	    SortingProblemsExample	 chapter5_javafx8.filterandsort	           Beispielprogramm demonstriert Fallstricke beim Einsatz von SortedList.
+
+5.5.4	199	    RichTextExample	chapter5_javafx8.richtext	               Beispielprogramm demonstriert das mit JDK 8 eingeführte Feature TextFlow mit CSS.
+5.5.5	201	    Figures3DExample	chapter5_javafx8.three_d	           Beispielprogramm zeigt zwei einfache Figuren in 3D.
+5.5.5	202	    Figures3DExampleWithLight	chapter5_javafx8.three_d	   Beispielprogramm zeigt zwei einfache Figuren in 3D mit Beleuchtung.
+
+
+5.6.1	203-204	  DialogsExample	chapter5_javafx8.update40	           Beispielprogramm zeigt den Einsatz von Dialogen, die mit Java FX 8 Update 40 ins JDK integriert wurden.
+5.6.2	205-206	  SpinnerExample	chapter5_javafx8.update40	           Beispielprogramm zeigt die mit Java FX 8 Update 40 eingeführte Spinner-Komponente.
+5.6.2	206-207	 FormattedTextFieldExample	chapter5_javafx8.update40	   Beispielprogramm zeigt die mit Java FX 8 Update 40 eingeführte formaterte TextField-Komponente.
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------				
+6.1	   216-217	NaturalOrderExample	chapter6_misc.comparator	            Beispielprogramm zeigt die Definition von verschiedenen Komparatoren unter anderem zur natürlichen Ordnung und der dazu inversen Ordnung.
+6.1	   217	NullSafeComparatorExample	chapter6_misc.comparator	        Beispielprogramm zeigt die Definition von null-sicheren Komparatoren, die null-Werte am Anfang bzw. am Ende einsortieren.
+
+6.2	   219	FirstOptionalExample	chapter6_misc.optional	                Beispielprogramm zur Demonstration der Klasse Optional<T> beim Berechnen von Minimum und Maximum.
+6.2	   220	OptionalAlternativesExample	chapter6_misc.optional	            Beispielprogramm zeigt, wie lesbar sich Alternativen mithilfe der Klasse Optional<T> beschreiben lassen.
+6.2	   221	OptionalPrimitivesExample	chapter6_misc.optional	            Beispielprogramm zur Demonstration der Klassen OptionalInt und OptionalDouble bei der Verarbeitung primitiver Werte.
+
+6.3	   224	ParallelArraySortExample	chapter6_misc.parallelarray	        Beispielprogram illustriert einen einfachen Aufruf des parallelen Sortierens.
+6.3	   224	ParallelArraySortExample2	chapter6_misc.parallelarray	        Beispielprogramm zeigt eine sequenzielle und eine parallele Sortierung für verschiedene Größen von Arrays.
+6.3	   226	ParallelArraySetAllExample	chapter6_misc.parallelarray	        Beispielprogramm zeigt die Berechnung einer gewünschten Funktion für jeden Wert eines Arrays als eine sehr gut parallelisierbare Aktion.
+6.3	   227	ParallelArraySetAllExample2	chapter6_misc.parallelarray	        Beispielprogramm zeigt die Berechnung einer gewünschten Funktion für jeden Wert eines Arrays als eine sehr gut parallelisierbare Aktion – hier für String-Werte.
+6.3	   227	ParallelArrayPrefixExample	chapter6_misc.parallelarray	        Beispielprogramm zeigt die Berechnung, die Elemente des Arrays jeweils mit dem Wert des Vorgängers verknüpft.
+
+6.4	   228	WordCountPreJDK8Example	chapter6_misc.map	                    Beispielprogramm demonstriert verschiedene Methoden, um die Häufigkeiten von Wörtern in einem Text zu ermitteln – zunächst ohne JDK 8.
+6.4	   230	WordCountPutIfAbsentReplaceExample	chapter6_misc.map	        Beispielprogramm demonstriert verschiedene Methoden, um die Häufigkeiten von Wörtern in einem Text zu ermitteln – mit putIfAbsent() und replace().
+6.4	   231	WordCountMapComputeIfExample	chapter6_misc.map	            Beispielprogramm demonstriert verschiedene Methoden, um die Häufigkeiten von Wörtern in einem Text zu ermitteln – mit compute...If()
+6.4	   232 	WordCountMapMergeExample	chapter6_misc.map	                Beispielprogramm demonstriert verschiedene Methoden, um die Häufigkeiten von Wörtern in einem Text zu ermitteln – mit merge().
+
+6.5	   234	FirstCompleteableFutureExample	chapter6_misc.concurrency	    Beispielprogram illustriert die Ausführung paralleler Aktion mit der Klasse CompletableFuture<T>.
+6.5	   235	CompleteableFutureExample	chapter6_misc.concurrency	        Beispielprogram illustriert die Ausführung paralleler Aktion mit der Klasse CompletableFuture<T> am Beispiel des Wortzählens.
+
+6.6	   239	ListScriptingEngines	chapter6_misc.nashorn	                Beispielprogramm, um verfügbare Scripting Engines aufzulisten.
+6.6	   240	SimpleJavaScriptAndBindingDemo	chapter6_misc.nashorn	        Beispielprogramm verdeutlicht, wie man JavaScript-Anweisungen ausführen kann.
+6.6	   241	DynamicCalculationExample	chapter6_misc.nashorn	            Beispielprogramm zeigt, wie man dynamische Berechnungen mit JavaScript ausführen kann.
+
+6.8	    243	Base64Example	chapter6_misc.base64	                        Beispielprogramm demonstiert die Umwandlung eines Strings in eine Base64-Codierung.
+
+6.9	    244	ReflectionParameterNamesExample	    chapter6_misc.reflection	Beispielprogramm zeigt einige Neuerungen im Bereich von Reflection.
+
+6.10	246	FilesExample	chapter6_misc.files	                            Beispielprogramm zeigt die Klasse Files und einige Methoden.
+
+6.12	249	MathOverflowExample	chapter6_misc.math	                        Beispielprogramm demonstriert Überläufe bei Berechnungen.
+
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------				
+7.1	    258	 HistogramExample	chapter7_realworld	            Beispielprogramm demonstiert die Aufbereitung eines Histogramms.
+7.2	    261-263	 CallAnalyzer	chapter7_realworld	            Beispielprogramm demonstiert die Aufbereitung von Histrogrammen aus Log-Dateien.
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------				
+8.1.1	268	     HashMapExample	chapter8_migration	            Beispielprogramm zeigt die unterschiedliche Reihenfolge der Speicherung in HashMaps bei JDK 7 bzw. JDK 8.
+8.1.2	269	     SimpleDateFormatExample	chapter8_migration	Beispielprogramm zeigt Unterschiede zwischen JDK 7 und JDK 8 beim SimpleDateFormat.
+8.1.3	269	     NumberFormatExample	chapter8_migration	    Beispielprogramm zeigt Unterschiede zwischen JDK 7 und JDK 8 bei Rundungen und NumberFormat.
+8.1.4	270	     ScriptEngineExample	chapter8_migration	    Beispielprogramm gibt Informationen zur verwendeten JavaScript-Engine aus.
+8.3.1	274-275	 JavaFXInSwingExample	chapter8_migration	    Beispielprogramm demonstiert wie man JavaFX in Swing einbinden kann.
+8.3.2	276	     SwingNodeExample	chapter8_migration	        Beispielprogramm demonstiert wie man Swing in JavaFX einbinden kann.
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------				
+99	BONUS	FirstGraphicNodesExample	chapter5_javafx.canvas	  Beispielprogramm zur Demonstration einfacher Figuren als JavaFX-Nodes
+99	BONUS	FirstCanvasExample	chapter5_javafx.canvas	Beispielprogramm zur Demonstration einfacher Zeichenbefehle im JavaFX Canvas.
+99	BONUS	SecondCanvasExample	chapter5_javafx.canvas	Beispielprogramm zur Demonstration komplexerer Zeichenbefehle sowie von Effekten im JavaFX Canvas.
+99	BONUS	FirstSvgExample	 chapter5_javafx.canvas	Beispielprogramm zur Demonstration einfacher SVG-Zeichenbefehle in JavaFX.

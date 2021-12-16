@@ -1,0 +1,53 @@
+.big {
+    -fx-font-size: 80.0px;
+}
+
+.paragraph {
+    -fx-font-family: Dialog;
+    -fx-font-size: 60.0px;
+    -fx-vgap: 30.0px;
+}
+
+.text1 {
+    -fx-stroke: darkblue;
+    -fx-stroke-width: 2.5;
+    -fx-fill: darkgoldenrod;
+}
+
+.text2 {
+    -fx-font-weight: bold;
+    -fx-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, repeat, orange 0.0%, red 50.0%);
+    -fx-stroke: black;
+    -fx-stroke-width: 2.0;
+}
+
+.text3 {
+    -fx-fill: green;
+    -fx-font-style: italic;
+    -fx-cursor: hand;
+    -fx-rotate: 30.0;
+}
+
+.dropshadow {
+    -fx-effect: dropshadow(gaussian, gray, 8.0, 0.5, 8.0, 8.0);
+}
+
+.underlinefancy {
+    -fx-underline: true;
+    -fx-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, orange 0.0%, red 50.0%, magenta 100.0%);
+    -fx-stroke: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, repeat, black 0.0%, blue 50.0%);
+    -fx-stroke-width: 2.0;
+}
+
+.rotatedThai {
+    -fx-stroke: black;
+    -fx-stroke-width: 2.0;
+    -fx-rotate: -5.0;
+    -fx-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, yellow 0.0%, red 50.0%, blue 75.0%, green 100.0%);
+    -fx-font-weight: bold;
+}
+ 
+
+ 
+
+
