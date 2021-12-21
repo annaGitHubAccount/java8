@@ -1,1 +1,5 @@
-Ala has a dog an elephant and this hourse.
+This is the first line.
+The second line of this text.
+Third line contains some text.
+Last line and goodbye:
+End of text!

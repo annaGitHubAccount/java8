@@ -36,9 +36,10 @@ public class CollectorsToMapExample2 {
         System.out.println(java8Ergebnis);*/
 
         // dlatego lepiej uzyc groupingBy() - zmieniam liste osob na mape: miasto + liste osob w miescie:
-        System.out.println("groupingBy");
-        Map<String, List<Person>> personByCity = persons.stream().collect(Collectors.groupingBy(person -> person.getCity()));
-        System.out.println(personByCity);
+        System.out.println("groupingByJava8 - create a Map from a List:");
+
+        Map<String, List<Person>> groupingByJava8 = persons.stream().collect(Collectors.groupingBy(person -> person.getCity()));
+        System.out.println(groupingByJava8);
     }
 
     static List<Person> createPersons() {

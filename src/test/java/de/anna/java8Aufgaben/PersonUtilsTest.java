@@ -8,6 +8,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.OptionalDouble;
 
 public class PersonUtilsTest {
@@ -40,6 +41,7 @@ public class PersonUtilsTest {
 
         List<Person> expectedPersonList = new ArrayList<>();
         expectedPersonList.add(new Person("Freddie", "Mercury", 40));
+        expectedPersonList.add(new Person("Merlin", "Monrou", 40));
         expectedPersonList.add(new Person("Michael", "Jackson", 30));
 
         List<Person> personListMitAlter = PersonUtils.personListPerAlterSortieren(personList);
@@ -52,6 +54,7 @@ public class PersonUtilsTest {
 
         List<String> expectedListVonNachnamen = new ArrayList<>();
         expectedListVonNachnamen.add("Mercury");
+        expectedListVonNachnamen.add("Monrou");
 
         List<String> listVonNachnamen = PersonUtils.listNachnamenAufBuchstabe(personList, "M");
 
@@ -63,6 +66,7 @@ public class PersonUtilsTest {
 
         List<Person> expectedPersonList = new ArrayList<>();
         expectedPersonList.add(new Person("Freddie", "Mercury", 40));
+        expectedPersonList.add(new Person("Merlin", "Monrou", 40));
 
         List<Person> personListWithBuchstabe = PersonUtils.listNachnamenVonPersonenAufBuchstabe(personList, "M");
 
@@ -78,11 +82,13 @@ public class PersonUtilsTest {
     }
 
     @Test
-    public void berechneSummeVonPersonenAlterTest(){
+    public void shouldCalculateSumOfPersonsAge(){
 
-        int summeVonPersonenAlter = PersonUtils.berechneSummeVonPersonenAlter(personList);
+        Optional<Integer> summeVonPersonenAlter = PersonUtils.calculateSumOfPersonsAge(personList);
 
-        Assert.assertEquals(127, summeVonPersonenAlter);
+        Assert.assertTrue(summeVonPersonenAlter.isPresent());
+        Assert.assertNotNull(summeVonPersonenAlter);
+        Assert.assertEquals(127, summeVonPersonenAlter.get().intValue());
     }
 
     @Test
@@ -95,6 +101,8 @@ public class PersonUtilsTest {
         } else {
             Assert.fail();
         }
+
+        Assert.assertNotNull(optionalDouble);
     }
 
 }

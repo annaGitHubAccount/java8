@@ -3,6 +3,7 @@ package de.anna.java8Aufgaben;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
+import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -29,10 +30,10 @@ public class StringUtils {
     }
 
 
-    public static List<String> textUmwandlung(List<String> stringList, Function<String, String> function){
+    public static List<String> textUmwandlung(List<String> stringList, UnaryOperator<String> unaryOperator){
 
         return stringList.stream().
-                map(function).
+                map(unaryOperator).
                 collect(Collectors.toList());
     }
 
